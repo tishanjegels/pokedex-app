@@ -34,213 +34,25 @@ function logic() {
     }
 
     // Create pokemon object here (const pokemon) using user input Strings 
-    const pokemon = [
-        {
-            name: "Mewtwo",
-            type: "Psychic",
-            region: "Generation I",
-        },
-        {
-            name: "Pikachu",
-            type: "Electric",
-            region: "Generation I",
-        },
-        {
-            name: "Dragonair",
-            type: "Dragon",
-            region: "Generation I",
-        },
-        {
-            name: "Flareon",
-            type: "Fire",
-            region: "Generation I",
-        },
-        {
-            name: "Blastoise",
-            type: "Water",
-            region: "Generation I",
-        },
-        {
-            name: "Typhlosion",
-            type: ["Fire , Ghost"],
-            region: "Generation II",
-        },
-        {
-            name: "Miltank",
-            type: "Normal",
-            region: "Generation II",
-        },
-        {
-            name: "Smoochum",
-            type: ["Ice , Psychic"],
-            region: "Generation II",
-        },
-        {
-            name: "Kingdra",
-            type: ["Water , Dragon"],
-            region: "Generation II",
-        },
-        {
-            name: "Granbull",
-            type: "Fairy",
-            region: "Generation II",
-        },
-        {
-            name: "Sceptile",
-            type: "Grass",
-            region: "Generation III",
-        },
-        {
-            name: "Jirachi",
-            type: ["Steel , Psychic"],
-            region: "Generation III",
-        },
-        {
-            name: "Linoone",
-            type: ["Dark , Normal"],
-            region: "Generation III",
-        },
-        {
-            name: "Cardevoir",
-            type: ["Psychic , Fairy"],
-            region: "Generation III",
-        },
-        {
-            name: "Noespass",
-            type: "Rock",
-            region: "Generation III",
-        },
-        {
-            name: "Burmy",
-            type: "Bug",
-            region: "Generation IV",
-        },
-        {
-            name: "Happing",
-            type: "Normal",
-            region: "Generation IV",
-        },
-        {
-            name: "Skrupi",
-            type: ["Poison, Bug"],
-            region: "Generation IV",
-        },
-        {
-            name: "Weavile",
-            type: ["dark , Ice"],
-            region: "Generation IV",
-        },
-        {
-            name: "Rotom",
-            type: ["Electric , Fire"],
-            region: "Generation IV",
-        },
-        {
-            name: "Simisage",
-            type: "Grass",
-            region: "Generation V",
-        },
-        {
-            name: "Blitze",
-            type: "Electric",
-            region: "Generation V",
-        },
-        {
-            name: "Drilbur",
-            type: "Ground",
-            region: "Generation V",
-        },
-        {
-            name: "Timburr",
-            type: "Fighting",
-            region: "Generation V",
-        },
-        {
-            name: "Klink",
-            type: "Steel",
-            region: "Generation V",
-        },
-        {
-            name: "Vivillon",
-            type: ["Bug , Flying"],
-            region: "Generation VI",
-        },
-        {
-            name: "Daublade",
-            type: ["Steel , Ghost"],
-            region: "Generation VI",
-        },
-        {
-            name: "Malamar",
-            type: ["Dark , Psychic"],
-            region: "Generation VI",
-        },
-        {
-            name: "Dragalge",
-            type: ["Poison , Dragon"],
-            region: "Generation VI",
-        },
-        {
-            name: "Aurorus",
-            type: ["Rock , Ice"],
-            region: "Generation VI",
-        },
-        {
-            name: "Primarina",
-            type: ["Water , Fairy"],
-            region: "Generation VII",
-        },
-        {
-            name: "Rockruff",
-            type: "Rock",
-            region: "Generation VII",
-        },
-        {
-            name: "Lurantis",
-            type: "Grass",
-            region: "Generation VII",
-        },
-        {
-            name: "Komala",
-            type: "Normal",
-            region: "Generation VII",
-        },
-        {
-            name: "Zeraora",
-            type: "Electric",
-            region: "Generation VII",
-        },
-        {
-            name: "Glastrier",
-            type: "Ice",
-            region: "Generation VIII",
-        },
-        {
-            name: "Kubfu",
-            type: "Fighting",
-            region: "Generation VIII",
-        },
-        {
-            name: "Cufant",
-            type: "Steel",
-            region: "Generation VIII",
-        },
-        {
-            name: "Cursola",
-            type: "Ghost",
-            region: "Generation VIII",
-        },
-        {
-            name: "Nickit",
-            type: "Dark",
-            region: "Generation VIII",
-        },
-    ]
+    const pokemon = {
+        name: '',
+        type: '',
+        region: '',
+    }
 
 
     // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
 
     const pokemonData = document.createElement("SPAN");
+
+    let theName = document.createTextNode(pokemon.name);
+    pokemonData.appendChild(theName);
+
+    let thetype = document.createTextNode(pokemon.name);
+    pokemonData.appendChild(thetype);
+
+    let theregion = document.createTextNode(pokemon.name);
+    pokemonData.appendChild(theregion);
 
 
     /* --- Part 2 : Creating other DOM Objects --- */
@@ -269,6 +81,11 @@ function logic() {
 
     // Firstly append pokemonData to the innerHTML of pokedexEntry
 
+    const userInput = document.createTextNode(name);
+
+    pokedexEntry.appendChild(userInput)
+
+    document.getElementById("pokedex-entries")
 
     // Secondly append the previewButton to innerHTML of pokedexEntry
 
